@@ -1,34 +1,40 @@
 ---
 import { Image } from 'astro:assets';
-import myImage from "../Images/stasapu.png";
+import Image1 from "../Images/category_1--pc.png"
+import Image2 from "../Images/category_2--pc.png"
+import Image3 from "../Images/category_3--pc.png"
+import Image4 from "../Images/category_4--pc.png"
+
 
 const ListItems = [
   {
-    image :"../Images/stasapu.png",
+    image :Image1,
     text: "スタディサプリ ENGLISHのサービス（個人の方・団体会員の方）に関するお問い合わせ・ご意見については、こちらをご確認ください。"
 }, 
 {
-    image :"../Images/stasapu.png",
+    image :Image2,
     text: "スタディサプリ ENGLISHのサービス（企業の方・学校法人の方）に関するお問い合わせ・ご意見については、こちらをご確認ください。"
 }, 
 {
-    image :"../Images/stasapu.png",
+    image :Image3,
     text: "スタディサプリENGLISH for KIDSに関するお問い合わせ・ご意見については、こちらをご確認ください"
 }, 
 {
-    image :"../Images/stasapu.png",
+    image :Image4,
     text: "リクルート ID、ログイン・パスワード忘れ、スタディサプリENGLISH以外でたまる・つかえるポイントについてはこちらをご確認ください。"
 }
 ]
+
+
+
 ---
 
 <div class="card_grid">
   {ListItems.map((item)=>(
     <div class="card_item">
-      <Image src={myImage} alt="pic"/>
+      <Image src={item.image} alt=""/>
       <p class="card_item-text">{item.text}</p>
       </div>
-    
   ))}	
 </div>
 
@@ -39,6 +45,7 @@ const ListItems = [
 .card_item{
 list-style:none;
 width: 100%;
+
 }
 
 .card_item-text{
@@ -50,14 +57,15 @@ font-size:14px;
 img{
   width:100%;
   height: 100px;
+  cursor: pointer;
 }
 
 .card_grid{
   display: grid;
   /* grid-auto-flow: column; */
-  grid-template-columns:400px 400px;
+  grid-template-columns:1fr 1fr;
   grid-gap:30px;
-  row-gap:10px;
+  row-gap:20px;
   justify-content: center;
 }
 
