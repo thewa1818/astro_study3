@@ -1,9 +1,9 @@
 ---
 import { Image } from 'astro:assets';
-import Image1 from "../Images/category_1--pc.png"
-import Image2 from "../Images/category_2--pc.png"
-import Image3 from "../Images/category_3--pc.png"
-import Image4 from "../Images/category_4--pc.png"
+import Image1 from "../Images/pr1.webp"
+import Image2 from "../Images/pr2.webp"
+import Image3 from "../Images/pr3.webp"
+import Image4 from "../Images/pr4.webp"
 
 
 const ListItems = [
@@ -22,7 +22,7 @@ const ListItems = [
 {
     image :Image4,
     text: "リクルート ID、ログイン・パスワード忘れ、スタディサプリENGLISH以外でたまる・つかえるポイントについてはこちらをご確認ください。"
-}
+},
 ]
 
 
@@ -45,7 +45,6 @@ const ListItems = [
 .card_item{
 list-style:none;
 width: 100%;
-
 }
 
 .card_item-text{
@@ -56,16 +55,15 @@ font-size:14px;
 
 img{
   width:100%;
-  height: 100px;
+  height: 200px;
   cursor: pointer;
+  object-fit:cover;
 }
 
 .card_grid{
   display: grid;
-  /* grid-auto-flow: column; */
   grid-template-columns:1fr 1fr;
-  grid-gap:30px;
-  row-gap:20px;
+  gap:30px;
   justify-content: center;
 }
 
