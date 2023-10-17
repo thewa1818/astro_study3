@@ -1,12 +1,45 @@
 ---
 import List from "./List.astro";
+import Image1 from "../Images/pr1.webp"
+import Image2 from "../Images/pr2.webp"
+import Image3 from "../Images/pr3.webp"
+import Image4 from "../Images/pr4.webp"
+
+
+const ListItems = [
+  {
+    image :Image1,
+    text: "スタディサプリ ENGLISHのサービス（個人の方・団体会員の方）に関するお問い合わせ・ご意見については、こちらをご確認ください。",
+    url:"https://www.mcdonalds.co.jp/"
+}, 
+{
+    image :Image2,
+    text: "スタディサプリ ENGLISHのサービス（企業の方・学校法人の方）に関するお問い合わせ・ご意見については、こちらをご確認ください。",
+    url:"https://www.youtube.com/channel/UCeXSSi00j02qQzzMGvu00ag"
+}, 
+{
+    image :Image3,
+    text: "スタディサプリENGLISH for KIDSに関するお問い合わせ・ご意見については、こちらをご確認ください",
+    url:"https://www.yoshinoya.com/"
+}, 
+{
+    image :Image4,
+    text: "リクルート ID、ログイン・パスワード忘れ、スタディサプリENGLISH以外でたまる・つかえるポイントについてはこちらをご確認ください。",
+    url:"https://www.goldsgym.jp/"
+},
+]
+
+
+
 
 ---
 
 <div class="card_wrapper">
-    <List />
-</div>
 
+   {ListItems.map((item)=>(
+    <List url={item.url} image={item.image} text={item.text}/>
+   ))}
+</div>
 
 <style>
 
@@ -18,6 +51,11 @@ import List from "./List.astro";
 		border: 1px solid #c8c3c3;
 	  padding: 50px;
 		margin-bottom: 100px;
+		display: grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  justify-content: center;
+		
 	}
 
 </style>

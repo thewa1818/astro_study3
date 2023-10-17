@@ -1,42 +1,29 @@
 ---
+
 import { Image } from 'astro:assets';
-import Image1 from "../Images/pr1.webp"
-import Image2 from "../Images/pr2.webp"
-import Image3 from "../Images/pr3.webp"
-import Image4 from "../Images/pr4.webp"
-
-
-const ListItems = [
-  {
-    image :Image1,
-    text: "スタディサプリ ENGLISHのサービス（個人の方・団体会員の方）に関するお問い合わせ・ご意見については、こちらをご確認ください。"
-}, 
-{
-    image :Image2,
-    text: "スタディサプリ ENGLISHのサービス（企業の方・学校法人の方）に関するお問い合わせ・ご意見については、こちらをご確認ください。"
-}, 
-{
-    image :Image3,
-    text: "スタディサプリENGLISH for KIDSに関するお問い合わせ・ご意見については、こちらをご確認ください"
-}, 
-{
-    image :Image4,
-    text: "リクルート ID、ログイン・パスワード忘れ、スタディサプリENGLISH以外でたまる・つかえるポイントについてはこちらをご確認ください。"
-},
-]
-
-
+const {url,image,text} = Astro.props
 
 ---
 
-<div class="card_grid">
+<!-- <div class="card_grid">
   {ListItems.map((item)=>(
     <div class="card_item">
-      <Image src={item.image} alt=""/>
+      <a href={url} target="_blank">
+      <Image src={item.image} alt=""/></a>
       <p class="card_item-text">{item.text}</p>
       </div>
   ))}	
-</div>
+</div> -->
+
+
+
+    <div class="card_item">
+      <a href={url} target="_blank">
+      <Image src={image} alt=""/></a>
+      <p class="card_item-text">{text}</p>
+      </div>
+
+
 
 
 
@@ -60,12 +47,6 @@ img{
   object-fit:cover;
 }
 
-.card_grid{
-  display: grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-  justify-content: center;
-}
 
 
 
