@@ -18,7 +18,7 @@ const TopImage = () => {
   useEffect(() => {
     const url = window.location.search;
     url.concat("?test=ok");
-    if (window.location.search.includes("test")) {
+    if (url.includes("test")) {
       setTopImage(ImageSub.src);
     } else {
       topImage;
