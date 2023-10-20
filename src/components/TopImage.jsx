@@ -1,15 +1,31 @@
 import { useState, useEffect } from "react";
-import firstImage from "../Images/Main.jpg";
+import Image from "../Images/Main.jpg";
+import ImageSub from "../Images/Sub.jpg";
 
 const TopImage = () => {
-  const [paraImage, setParaImage] = useState(firstImage);
+  const [topImage, setTopImage] = useState(Image.src);
 
-  return (
-    <div>
-      TopImage
-      <img src={paraImage} />
-    </div>
-  );
+  const TopImage = {
+    width: "1100px",
+    margin: "auto auto 30px",
+    height: "300px",
+    backgroundImage: `url(${topImage})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+  };
+
+  useEffect(() => {
+    const url = window.location.search;
+    url.concat("?test=ok");
+    if (window.location.search.includes("test")) {
+      setTopImage(ImageSub.src);
+    } else {
+      topImage;
+    }
+  }, []);
+
+  return <div style={TopImage}></div>;
 };
 
 export default TopImage;

@@ -5,7 +5,7 @@ const Text = () => {
   const [text, setText] = useState(false);
 
   const handleDoubleClick = () => {
-    setText((prevState) => !prevState);
+    setText((title) => !title);
   };
 
   const textStyle = {
