@@ -1,29 +1,28 @@
+---
+import Text from "./Text";
+---
+
+
 <div class="nuv_wrapper">
-  <h1 class="nuv_title">よくある質問・お問い合わせ</h1>
+  <div class="nuv_title">
+    <Text client:load />
+  </div>
 </div>
 
 
 <style>
 
-*{
-  padding: 0;
-  margin: 0;
-}
 
 
   .nuv_wrapper{
     width: 100%;
     background-color: rgb(69, 69, 199);
-    height:150px;
-    margin-bottom: 30px;
-
+    margin: 0px 0px 30px 0px;
   }
 
   .nuv_title{
-    font-size: 24px;
-    color: #fff;
-    width: 1000px;
+    width: 1100px;
     margin: auto;
-    line-height: 150px;
+    user-select: none;
   }
 </style>
