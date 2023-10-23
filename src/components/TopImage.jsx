@@ -4,6 +4,7 @@ import ImageSub from "../Images/Sub.jpg";
 
 const TopImage = () => {
   const [topImage, setTopImage] = useState(Image.src);
+  const [aa, setAa] = useState(false);
 
   const TopImage = {
     width: "1100px",
@@ -22,9 +23,14 @@ const TopImage = () => {
     } else {
       topImage;
     }
+    setTimeout(function () {
+      setAa(true);
+    }, 500);
   }, []);
 
-  return <div style={TopImage}></div>;
+  return !aa ? <div>読み込み中・・・</div> : <div style={TopImage}></div>;
+
+  // return aa && <div style={TopImage}></div>;
 };
 
 export default TopImage;

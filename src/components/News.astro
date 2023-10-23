@@ -1,0 +1,47 @@
+---
+import Info from "./Info.astro";
+
+
+const NewsItems = [
+  {
+    title:"お知らせ",
+    text:"【重要】日常英会話コースリニューアルに伴う、『スタディサプリENGLISH 日常英会話コース（旧アプリ）』終了のお知らせ"
+  },  
+  {
+    title:"お知らせ",
+    text:"年末年始期間中の対応について"
+  },
+  {
+    title:"お知らせ",
+    text:"スタディサプリ10周年記念!特設サイト公開中"
+  },
+  {
+    title:"お知らせ",
+    text:"【重要】有料会員権利付与漏れのお詫びとご返金のお知らせ"
+  },
+]
+---
+<div class="info_wrapper">
+<h1>INFORMATION</h1>
+{NewsItems.map((item)=>(
+ <Info title={item.title} text={item.text}/>
+))}
+</div>
+
+<style>
+
+.info_wrapper{
+    padding: 0;
+   margin: 0;
+    width: 100%;
+   padding-bottom:50px ;
+    background-color: rgb(69, 69, 199);}
+
+  h1{
+    color: rgba(255, 255, 255, 0.651);
+    text-align: center;
+    font-size: 40px;
+    padding-top: 50px;
+  }
+  
+  </style>

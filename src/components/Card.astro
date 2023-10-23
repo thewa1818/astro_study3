@@ -27,6 +27,7 @@ const ListItems = [
     text: "リクルート ID、ログイン・パスワード忘れ、スタディサプリENGLISH以外でたまる・つかえるポイントについてはこちらをご確認ください。",
     url:"https://www.goldsgym.jp/"
 },
+
 ]
 
 
@@ -35,7 +36,6 @@ const ListItems = [
 ---
 
 <div class="card_wrapper">
-
    {ListItems.map((item)=>(
     <List url={item.url} image={item.image} text={item.text}/>
    ))}
