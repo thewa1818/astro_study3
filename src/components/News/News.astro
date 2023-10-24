@@ -1,6 +1,6 @@
 ---
 import "../News/News.scss"
-import Heading from "../Info/Info.jsx"
+import Info from "../Info/Info.jsx"
 
 
 
@@ -43,7 +43,7 @@ const NewsItems = [
 <div class="info__wrapper">
 <p class="info__wrapper-title">INFORMATION</p>
 {NewsItems.map((item)=>(
- <Heading title={item.title} text={item.text}client:load/>
+ <Info title={item.title} text={item.text}client:load/>
 ))}
 
 </div>
