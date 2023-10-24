@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../Info/Info.scss";
 import Icon from "@mui/icons-material/ArrowForwardIosRounded";
 
