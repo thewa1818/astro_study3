@@ -1,0 +1,36 @@
+.news__wrapper {
+  padding: 30px 0px 30px 0px;
+  width: 1100px;
+  margin: auto;
+  display: flex;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.166);
+
+  &:hover {
+    opacity: 0.8;
+    background-color: rgb(79, 79, 223);
+  }
+
+  &-title {
+    color: #fff;
+    width: 20%;
+    text-align: center;
+    border-radius: 2px;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 40px;
+    font-size: 14px;
+  }
+
+  &-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+
+    a {
+      color: #fff;
+    }
+  }
+}

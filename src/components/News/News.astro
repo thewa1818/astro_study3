@@ -1,5 +1,5 @@
 ---
-import "../News/News.css"
+import "../News/News.scss"
 import Heading from "../Info/Info.jsx"
 
 
@@ -21,11 +21,19 @@ const NewsItems = [
     title:"重要",
     text:"有料会員権利付与漏れのお詫びとご返金のお知らせ"
   },
+  {
+    title:"重要",
+    text:"有料会員権利付与漏れのお詫びとご返金のお知らせ"
+  },
+  {
+    title:"重要",
+    text:"有料会員権利付与漏れのお詫びとご返金のお知らせ"
+  },
 ]
 
 ---
-<div class="info_wrapper">
-<p class="info_title">INFORMATION</p>
+<div class="info__wrapper">
+<p class="info__wrapper-title">INFORMATION</p>
 {NewsItems.map((item)=>(
  <Heading title={item.title} text={item.text}client:load/>
 ))}

@@ -1,35 +1,35 @@
 import React, { useState, useEffect } from "react";
-import "../Info/Info.css";
+import "../Info/Info.scss";
 import Icon from "@mui/icons-material/ArrowForwardIosRounded";
 
-const Heading = ({ title, text }) => {
-  const [backgroundColor, setBackgroundColor] = useState("");
+const Info = ({ title, text }) => {
+  const [bgColor, setBgColor] = useState("#000");
 
   useEffect(() => {
     if (title === "お知らせ") {
-      setBackgroundColor("rgb(142, 135, 235)");
+      setBgColor("rgb(142, 135, 235)");
     } else if (title === "速報") {
-      setBackgroundColor("rgb(231, 189, 10)");
+      setBgColor("rgb(231, 189, 10)");
     } else if (title === "重要") {
-      setBackgroundColor("rgb(223, 95, 95)");
+      setBgColor("rgb(223, 95, 95)");
     } else {
-      setBackgroundColor("pink");
+      setBgColor("pink");
     }
   }, []);
 
   return (
-    <div className="news_wrapper">
-      <p className="news_title" style={{ backgroundColor }}>
+    <div className="news__wrapper">
+      <div className="news__wrapper-title" style={{ backgroundColor: bgColor }}>
         {title}
-      </p>
-      <p className="news_text">
+      </div>
+      <div className="news__wrapper-text">
         <a href="">{text}</a>
         <p>
           <Icon style={{ color: "#fff" }} />
         </p>
-      </p>
+      </div>
     </div>
   );
 };
 
-export default Heading;
+export default Info;

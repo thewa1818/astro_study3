@@ -1,7 +1,7 @@
 ---
 
 import { Image } from 'astro:assets';
-import "../List/List.css"
+import "../List/List.scss"
 const {url,image,text} = Astro.props
 
 
@@ -9,10 +9,10 @@ const {url,image,text} = Astro.props
 
 
 
-    <div class="card_item">
+    <div class="card__item">
       <a href={url} target="_blank">
       <Image src={image} alt=""/></a>
-      <p class="card_item-text">{text}</p>
+      <p class="card__item-text">{text}</p>
       </div>
 
 
