@@ -1,9 +1,10 @@
 ---
-import List from "./List.astro";
-import Image1 from "../Images/pr1.webp"
-import Image2 from "../Images/pr2.webp"
-import Image3 from "../Images/pr3.webp"
-import Image4 from "../Images/pr4.webp"
+import List from "../List/List.astro";
+import Image1 from "../../Images/pr1.webp"
+import Image2 from "../../Images/pr2.webp"
+import Image3 from "../../Images/pr3.webp"
+import Image4 from "../../Images/pr4.webp"
+import "../Card/Card.css"
 
 
 const ListItems = [
@@ -31,8 +32,6 @@ const ListItems = [
 ]
 
 
-
-
 ---
 
 <div class="card_wrapper">
@@ -41,21 +40,4 @@ const ListItems = [
    ))}
 </div>
 
-<style>
 
-	.card_wrapper{
-		background-color: #fff;
-		width: 1000px;
-		margin: auto;
-		border-radius: 4px;
-		border: 1px solid #c8c3c3;
-	  padding: 50px;
-		margin-bottom: 100px;
-		display: grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-  justify-content: center;
-		
-	}
-
-</style>

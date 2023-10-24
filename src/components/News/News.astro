@@ -1,0 +1,33 @@
+---
+import "../News/News.css"
+import Heading from "../Info/Info.jsx"
+
+
+
+const NewsItems = [
+  {
+    title:"重要",
+    text:"日常英会話コースリニューアルに伴う、『スタディサプリENGLISH 日常英会話コース（旧アプリ）』終了のお知らせ"
+  },  
+  {
+    title:"お知らせ",
+    text:"年末年始期間中の対応について"
+  },
+  {
+    title:"速報",
+    text:"スタディサプリ10周年記念!特設サイト公開中"
+  },
+  {
+    title:"重要",
+    text:"有料会員権利付与漏れのお詫びとご返金のお知らせ"
+  },
+]
+
+---
+<div class="info_wrapper">
+<p class="info_title">INFORMATION</p>
+{NewsItems.map((item)=>(
+ <Heading title={item.title} text={item.text}client:load/>
+))}
+
+</div>
