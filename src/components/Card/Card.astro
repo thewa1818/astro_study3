@@ -10,22 +10,22 @@ import "../Card/Card.scss"
 const ListItems = [
   {
     image :Image1,
-    text: "スタディサプリ ENGLISHのサービス（個人の方・団体会員の方）に関するお問い合わせ・ご意見については、こちらをご確認ください。",
+    content: "スタディサプリ ENGLISHのサービス（個人の方・団体会員の方）に関するお問い合わせ・ご意見については、こちらをご確認ください。",
     url:"https://www.mcdonalds.co.jp/"
 }, 
 {
     image :Image2,
-    text: "スタディサプリ ENGLISHのサービス（企業の方・学校法人の方）に関するお問い合わせ・ご意見については、こちらをご確認ください。",
+    content: "スタディサプリ ENGLISHのサービス（企業の方・学校法人の方）に関するお問い合わせ・ご意見については、こちらをご確認ください。",
     url:"https://www.youtube.com/channel/UCeXSSi00j02qQzzMGvu00ag"
 }, 
 {
     image :Image3,
-    text: "スタディサプリENGLISH for KIDSに関するお問い合わせ・ご意見については、こちらをご確認ください",
+    content: "スタディサプリENGLISH for KIDSに関するお問い合わせ・ご意見については、こちらをご確認ください",
     url:"https://www.yoshinoya.com/"
 }, 
 {
     image :Image4,
-    text: "リクルート ID、ログイン・パスワード忘れ、スタディサプリENGLISH以外でたまる・つかえるポイントについてはこちらをご確認ください。",
+    content: "リクルート ID、ログイン・パスワード忘れ、スタディサプリENGLISH以外でたまる・つかえるポイントについてはこちらをご確認ください。",
     url:"https://www.goldsgym.jp/"
 },
 
@@ -36,7 +36,7 @@ const ListItems = [
 
 <div class="card_wrapper">
    {ListItems.map((item)=>(
-    <List url={item.url} image={item.image} text={item.text}/>
+    <List url={item.url} image={item.image} content={item.content}/>
    ))}
 </div>
 
