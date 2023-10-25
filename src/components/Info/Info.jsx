@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "../Info/Info.scss";
-import Icon from "@mui/icons-material/ArrowForwardIosRounded";
+import { Icon } from "@iconify/react";
 
 const Info = ({ title, text }) => {
   const [bgColor, setBgColor] = useState("#000");
@@ -25,7 +25,7 @@ const Info = ({ title, text }) => {
       <div className="news__wrapper-text">
         <a href="">{text}</a>
         <p>
-          <Icon style={{ color: "#fff" }} />
+          <Icon icon="nimbus:chevron-right" color="white" />
         </p>
       </div>
     </div>
