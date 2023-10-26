@@ -23,7 +23,7 @@ export default function Slide() {
     <div className="slide_wrapper">
       <Slider {...settings}>
         {images.map((item) => (
-          <img className="slide_wrapper--img" src={item} />
+          <img key={item} className="slide_wrapper--img" src={item} />
         ))}
       </Slider>
     </div>
