@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.header__wrapper {
+  width: 100%;
+  margin: auto;
+  background-color: rgb(69, 69, 199);
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+
+  &-title {
+    margin-left: 50px;
+  }
+
+  &-list {
+    list-style: none;
+    display: flex;
+    margin-right: 50px;
+
+    &-item {
+      margin-left: 50px;
+    }
+  }
+}

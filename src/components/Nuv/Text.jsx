@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-const Text = () => {
+const Text = ({ headerTitle }) => {
   const [text, setText] = useState(false);
 
   const handleDoubleClick = () => {
@@ -19,7 +19,7 @@ const Text = () => {
   return (
     <>
       <span onDoubleClick={handleDoubleClick} style={textStyle}>
-        {text ? "ただいま問い合わせ中..." : "よくある質問・お問い合わせ"}
+        {text ? "ただいま問い合わせ中..." : "よくある質問・問い合わせ"}
       </span>
     </>
   );

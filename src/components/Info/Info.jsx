@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "../Info/Info.scss";
 import { Icon } from "@iconify/react";
 
-const Info = ({ title, text }) => {
+const Info = ({ title, text, link }) => {
   const [bgColor, setBgColor] = useState("#000");
 
   useEffect(() => {
@@ -23,10 +23,10 @@ const Info = ({ title, text }) => {
         {title}
       </div>
       <div className="news__wrapper-text">
-        <a href="">{text}</a>
-        <p>
-          <Icon icon="nimbus:chevron-right" color="white" />
-        </p>
+        <a href="../links" target="_blank">
+          {text}
+        </a>
+        <Icon icon="nimbus:chevron-right" color="white" />
       </div>
     </div>
   );
