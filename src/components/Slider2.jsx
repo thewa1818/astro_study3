@@ -1,35 +1,30 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
+import { Autoplay } from "swiper"; // 追記
 import "swiper/css";
-import "swiper/css/pagination";
-
-// import required modules
-import { Pagination } from "swiper/modules";
 import "../components/Slider2.scss";
 
 const Slider2 = () => {
   return (
     <>
       <Swiper
-        pagination={{
-          dynamicBullets: true,
-        }}
-        modules={[Pagination]}
-        autoplay={{ delay: 2 }}
         className="mySwiper"
+        modules={[Autoplay]} // 追記
+        autoplay={{ delay: 0 }} // 追記
+        loop={true}
+        speed={4000}
       >
         <SwiperSlide>
-          <img src="../../public/Main.jpg" />
+          <div className="bg1"></div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="../../public/slide.webp" />
+          <div className="bg2"></div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="../../public/slide2.jpg" />
+          <div className="bg3"></div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="../../public/slide3.jpg" />
+          <div className="bg4"></div>
         </SwiperSlide>
       </Swiper>
     </>
