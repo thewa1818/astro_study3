@@ -1,14 +1,15 @@
 ---
 import LinkLayout from "../layouts/LinkLayout.astro";
-// import Header from "../components/Link/Header.astro"
+import Header from "../components/Link/Header.astro"
 import Scroll from "../components/Link/Scroll";
-import Slider2 from "../components/Slider2";
+import ToTop from "../components/Link/ToTop.astro"
 
 
 
 ---
 
 <LinkLayout title={"リンク先"}>
-  <!-- <Header /> -->
-  <Scroll />
+  <Header />
+  <ToTop />
+  <Scroll client:only/>
 </LinkLayout>

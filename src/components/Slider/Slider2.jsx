@@ -2,7 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper"; // 追記
 import "swiper/css";
-import "../components/Slider2.scss";
+import "../Slider/Slider2.scss";
 
 const Slider2 = () => {
   return (

@@ -1,0 +1,27 @@
+.scroll__wrapper {
+  background-color: rgb(78, 33, 33);
+}
+
+.toTop {
+  background-color: rgb(69, 69, 199);
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  animation: fadeIn 0.3s ease 0.1s 1 normal backwards;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

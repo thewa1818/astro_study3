@@ -1,7 +1,17 @@
 ---
 import "../Link/Header.scss"
-
+const ListItems = ["アイテムA", "アイテムB", "アイテムC", "アイテムD"];
+import "../Link/Header.scss"
 import Scroll from "./Scroll";
 ---
-
+<div class="header">
+<div class="header__wrapper">
+  <h3 class="header__wrapper-title">スタディサプリ</h3>
+  <ul class="header__wrapper-list">
+    {ListItems.map((item) => (
+      <li class="header__wrapper-list-item">{item}</li>
+    ))}
+  </ul>
+</div>
+</div>
 
