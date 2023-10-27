@@ -11,7 +11,7 @@ const Scroll = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 400) {
+      if (window.scrollY > 110) {
         setShow(true);
       } else {
         setShow(false);

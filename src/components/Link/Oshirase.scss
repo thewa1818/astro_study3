@@ -1,0 +1,64 @@
+@import "../../mixin";
+
+.main__wrapper {
+  background-color: #fff;
+  width: 1100px;
+  margin: auto;
+  border-radius: 4px;
+  border: 1px solid #c8c3c3;
+  margin-top: 50px;
+
+  @include mq(tab) {
+    width: 1200px;
+  }
+
+  &-title {
+    padding: 70px 0px 100px 0px;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+
+    @include mq(tab) {
+      font-size: 50px;
+    }
+  }
+
+  .text__wrapper {
+    padding-bottom: 60px;
+    font-size: 20px;
+    width: 900px;
+    margin: auto;
+    @include mq(tab) {
+      font-size: 28px;
+    }
+
+    &-title {
+      font-weight: normal;
+      padding-bottom: 50px;
+    }
+
+    &-text {
+      font-size: 16px;
+      line-height: 30px;
+      padding-bottom: 50px;
+      @include mq(tab) {
+        font-size: 26px;
+        line-height: 50px;
+      }
+    }
+    &-text-red {
+      font-size: 16px;
+      padding: 20px;
+      border: 3px solid red;
+      border-radius: 4px;
+      line-height: 30px;
+      background-color: #d3101022;
+      color: red;
+      font-weight: bold;
+      @include mq(tab) {
+        font-size: 26px;
+        line-height: 50px;
+      }
+    }
+  }
+}

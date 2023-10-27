@@ -2,7 +2,8 @@
 import LinkLayout from "../layouts/LinkLayout.astro";
 import Header from "../components/Link/Header.astro"
 import Scroll from "../components/Link/Scroll";
-import ToTop from "../components/Link/ToTop.astro"
+import Oshirase from "../components/Link/Oshirase.astro"
+import Footer from "../components/Footer/Footer.astro"
 
 
 
@@ -10,6 +11,7 @@ import ToTop from "../components/Link/ToTop.astro"
 
 <LinkLayout title={"リンク先"}>
   <Header />
-  <ToTop />
+  <Oshirase />
   <Scroll client:only/>
+  <Footer />
 </LinkLayout>

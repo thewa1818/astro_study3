@@ -1,0 +1,31 @@
+---
+import "../Footer/Footer.scss"
+
+const FooterList =[
+  "小学生向け講座", "中学生向け講座", "高校生向け講座", "大学生向け講座", "社会人向け講座"
+]
+
+const FooterList2 = [
+  "お問い合わせ","会社概要","住所","プライバシーポリシー","リクルート"
+]
+
+---
+
+<div class="footer">
+  <div class="footer__wrapper">
+    <div class="footer__wrapper-title">
+      スタサプ
+    </div>
+    <ul class="footer__wrapper-list">
+      {FooterList.map((item)=>(
+     <li class="footer__wrapper-list-item">{item}</li>
+      ))}
+    </ul>
+    <ul class="footer__wrapper-list">
+      {FooterList2.map((item)=>(
+     <li class="footer__wrapper-list-item">{item}</li>
+      ))}
+    </ul>
+
+  </div>
+</div>

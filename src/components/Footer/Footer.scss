@@ -1,0 +1,45 @@
+@import "../../mixin";
+
+.footer {
+  margin-top: 50px;
+  width: 100%;
+  background-color: $bg;
+  color: #fff;
+
+  &__wrapper {
+    width: 1100px;
+    background-color: $bg;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq(tab) {
+      width: 1200px;
+      flex-direction: column;
+      justify-content: center;
+      height: 300px;
+    }
+
+    &-title {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    &-list {
+      list-style: none;
+
+      @include mq(tab) {
+        display: flex;
+      }
+
+      &-item {
+        padding-top: 20px;
+        @include mq(tab) {
+          padding-right: 40px;
+        }
+      }
+    }
+  }
+}

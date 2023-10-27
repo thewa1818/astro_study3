@@ -1,3 +1,5 @@
+@import "../../mixin";
+
 .card_wrapper {
   background-color: #fff;
   width: 1000px;
@@ -10,4 +12,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   justify-content: center;
+
+  @include mq(tab) {
+    grid-template-columns: 1fr;
+  }
 }
