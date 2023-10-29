@@ -13,6 +13,8 @@
 
     @include mq(tab) {
       text-align: center;
+      height: 200px;
+      line-height: 200px;
     }
   }
 }

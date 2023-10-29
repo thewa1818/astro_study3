@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import "../Nuv/Text.scss";
 
 const Text = ({ headerTitle }) => {
   const [text, setText] = useState(false);
@@ -8,17 +9,9 @@ const Text = ({ headerTitle }) => {
     setText((title) => !title);
   };
 
-  const textStyle = {
-    fontSize: "24px",
-    margin: "0px",
-    color: "#fff",
-    cursor: "pointer",
-    lineHeight: "150px",
-  };
-
   return (
     <>
-      <span onDoubleClick={handleDoubleClick} style={textStyle}>
+      <span onDoubleClick={handleDoubleClick} className="topText">
         {text ? "ただいま問い合わせ中..." : "よくある質問・問い合わせ"}
       </span>
     </>

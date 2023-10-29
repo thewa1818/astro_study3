@@ -1,0 +1,12 @@
+@import "../../mixin";
+
+.topText {
+  font-size: 24px;
+  margin: 0;
+  color: #fff;
+  cursor: pointer;
+
+  @include mq(tab) {
+    font-size: 50px;
+  }
+}

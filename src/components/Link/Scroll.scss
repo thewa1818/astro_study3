@@ -15,6 +15,11 @@
   top: 0;
   animation: fadeIn 0.3s ease 0.1s 1 normal backwards;
   cursor: pointer;
+  @include mq(tab) {
+    height: 120px;
+    font-size: 40px;
+    line-height: 120px;
+  }
 }
 
 @keyframes fadeIn {

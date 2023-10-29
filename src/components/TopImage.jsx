@@ -28,7 +28,11 @@ const TopImage = () => {
     }, 500);
   }, []);
 
-  return !aa ? <div>読み込み中・・・</div> : <div style={TopImage}></div>;
+  return !aa ? (
+    <div className="">読み込み中・・・</div>
+  ) : (
+    <div style={TopImage}></div>
+  );
 
   // return aa && <div style={TopImage}></div>;
 };
