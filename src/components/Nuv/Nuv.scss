@@ -10,6 +10,8 @@
     margin: auto;
     user-select: none;
     background-color: $bg;
+    height: 150px;
+    line-height: 150px;
 
     @include mq(tab) {
       text-align: center;
